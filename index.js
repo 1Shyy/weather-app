@@ -35,8 +35,8 @@ function extractWeatherData(response) {
             break;
         }
     }
-    for (let i = 0; i < 40 - startIndex; i++){
-        if (i > 3 && response.list[i].dt_txt.slice(11,13) == '12') {
+    for (let i = 0; i < 40; i++){
+        if (i > 4 && response.list[i].dt_txt.slice(11,13) == '12') {
             temperature.push(response.list[i].main.temp);
             feelsLike.push(response.list[i].main.feels_like);
             humidity.push(response.list[i].main.humidity);
