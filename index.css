@@ -61,7 +61,6 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
     display: flex;
-    margin: 0 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -194,11 +193,6 @@ body {
     gap: 8px;
 }
 
-.weather-intime img {
-    width: 100%;
-    height: 100%;
-}
-
 .weather-intime p {
     font-size: 12px;
     font-weight: 550;
@@ -218,13 +212,11 @@ body {
     .other-weather p{
         font-size: 16px;
     }
-    .weather-intime {
-        width: 25%;
-    }
-};
+}
 @media (max-width: 860px) {
+    
     .current-city{
-        font-size: 24px;
+        font-size: 20px;
     }
     .other-weather{
         width: 100%;
@@ -232,9 +224,12 @@ body {
     .current-temperature{
         width: 100%;
     }
-};
-@media (max-width: 500px) {
+}
+@media (max-width: 570px) {
     .weather-intime {
         flex-wrap: wrap;
     }
-};
+    .container{
+        max-width: 400px;
+    }
+}
