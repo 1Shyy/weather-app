@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Weatherly</h1>
+    </div>
+    <div class="container">
+        <div id="weather" class="weather">
+        <div class="tab">
+            <button id="day0" class="tablinks active" onclick="openDay(event, 'День 1')">27 сен</button>
+            <button id="day1" class="tablinks" onclick="openDay(event, 'День 2')">28 сен</button>
+            <button id="day2" class="tablinks" onclick="openDay(event, 'День 3')">29 сен</button>
+            <button id="day3" class="tablinks" onclick="openDay(event, 'День 4')">30 сен</button>
+            <button id="day4" class="tablinks" onclick="openDay(event, 'День 5')">01 ноя</button>
+        </div>
+        <div id="День 1" class="tabcontent" style="display: block;">
+            <div id="current-city" class="current-city"></div>
+            <div class="current-weather">
+                <div id="current-temperature0" class="current-temperature">12°C</div>
+                <div class="other-weather">
+                    <p id="feels-like0">Ощущается как: 11°C</p>
+                    <p id="wind-speed0">Скорость ветра: 2м/с</p>
+                    <p id="humidity0">Влажность: 30%</p>
+                </div>
+            </div>
+            <div class="day-weather">
+                <div id="time0" class="weather-intime">
+                    <p>03 : 00</p>
+                    <img id="img0" src="" alt="">
+                    <p id="temp0"></p>
+                </div>
+                <div id="time1" class="weather-intime">
+                    <p>06 : 00</p>
+                    <img id="img1" src="">
+                    <p id="temp1"</p>
+                </div>
+                <div id="time2" class="weather-intime">
+                    <p>09 : 00</p>
+                    <img id="img2" src="" alt="">
+                    <p id="temp2"></p>
+                </div>
+                <div id="time3" class="weather-intime">
+                    <p>12 : 00</p>
+                    <img id="img3" src="" alt="">
+                    <p id="temp3"></p>
+                </div>
+                <div id="time4" class="weather-intime">
+                    <p>15 : 00</p>
+                    <img id="img4" src="" alt="">
+                    <p id="temp4"></p>
+                </div>
+                <div id="time5" class="weather-intime">
+                    <p>18 : 00</p>
+                    <img id="img5" src="" alt="">
+                    <p id="temp5"></p>
+                </div>
+                <div id="time6" class="weather-intime">
+                    <p>21 : 00</p>
+                    <img id="img6" src="" alt="">
+                    <p id="temp6"></p>
+                </div>
+                <div id="time7" class="weather-intime">
+                    <p>00 : 00</p>
+                    <img id="img7" src="" alt="">
+                    <p id="temp7"></p>
+                </div>
+            </div>
+        </div>
+        <div id="День 2" class="tabcontent">
+            <div class="current-weather">
+                <div id="current-temperature1" class="current-temperature">12°C</div>
+                <div class="other-weather">
+                    <p id="feels-like1">Ощущается как: 11°C</p>
+                    <p id="wind-speed1">Скорость ветра: 2м/с</p>
+                    <p id="humidity1">Влажность: 30%</p>
+                </div>
+            </div>
+            <div class="day-weather">
+                <div class="weather-intime">
+                    <p>03 : 00</p>
+                    <img id="img8" src="" alt="">
+                    <p id="temp8"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>06 : 00</p>
+                    <img id="img9" src="">
+                    <p id="temp9"</p>
+                </div>
+                <div class="weather-intime">
+                    <p>09 : 00</p>
+                    <img id="img10" src="" alt="">
+                    <p id="temp10"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>12 : 00</p>
+                    <img id="img11" src="" alt="">
+                    <p id="temp11"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>15 : 00</p>
+                    <img id="img12" src="" alt="">
+                    <p id="temp12"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>18 : 00</p>
+                    <img id="img13" src="" alt="">
+                    <p id="temp13"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>21 : 00</p>
+                    <img id="img14" src="" alt="">
+                    <p id="temp14"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>00 : 00</p>
+                    <img id="img15" src="" alt="">
+                    <p id="temp15"></p>
+                </div>
+            </div>
+        </div>
+        <div id="День 3" class="tabcontent">
+            <div class="current-weather">
+                <div id="current-temperature2" class="current-temperature">12°C</div>
+                <div class="other-weather">
+                    <p id="feels-like2">Ощущается как: 11°C</p>
+                    <p id="wind-speed2">Скорость ветра: 2м/с</p>
+                    <p id="humidity2">Влажность: 30%</p>
+                </div>
+            </div>
+            <div class="day-weather">
+                <div class="weather-intime">
+                    <p>03 : 00</p>
+                    <img id="img16" src="" alt="">
+                    <p id="temp16"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>06 : 00</p>
+                    <img id="img17" src="">
+                    <p id="temp17"</p>
+                </div>
+                <div class="weather-intime">
+                    <p>09 : 00</p>
+                    <img id="img18" src="" alt="">
+                    <p id="temp18"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>12 : 00</p>
+                    <img id="img19" src="" alt="">
+                    <p id="temp19"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>15 : 00</p>
+                    <img id="img20" src="" alt="">
+                    <p id="temp20"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>18 : 00</p>
+                    <img id="img21" src="" alt="">
+                    <p id="temp21"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>21 : 00</p>
+                    <img id="img22" src="" alt="">
+                    <p id="temp22"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>00 : 00</p>
+                    <img id="img23" src="" alt="">
+                    <p id="temp23"></p>
+                </div>
+            </div>
+        </div>
+        <div id="День 4" class="tabcontent">
+            <div class="current-weather">
+                <div id="current-temperature3" class="current-temperature">12°C</div>
+                <div class="other-weather">
+                    <p id="feels-like3">Ощущается как: 11°C</p>
+                    <p id="wind-speed3">Скорость ветра: 2м/с</p>
+                    <p id="humidity3">Влажность: 30%</p>
+                </div>
+            </div>
+            <div class="day-weather">
+                <div class="weather-intime">
+                    <p>03 : 00</p>
+                    <img id="img24" src="" alt="">
+                    <p id="temp24"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>06 : 00</p>
+                    <img id="img25" src="">
+                    <p id="temp25"</p>
+                </div>
+                <div class="weather-intime">
+                    <p>09 : 00</p>
+                    <img id="img26" src="" alt="">
+                    <p id="temp26"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>12 : 00</p>
+                    <img id="img27" src="" alt="">
+                    <p id="temp27"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>15 : 00</p>
+                    <img id="img28" src="" alt="">
+                    <p id="temp28"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>18 : 00</p>
+                    <img id="img29" src="" alt="">
+                    <p id="temp29"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>21 : 00</p>
+                    <img id="img30" src="" alt="">
+                    <p id="temp30"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>00 : 00</p>
+                    <img id="img31" src="" alt="">
+                    <p id="temp31"></p>
+                </div>
+            </div>
+        </div>
+        <div id="День 5" class="tabcontent">
+            <div class="current-weather">
+                <div id="current-temperature4" class="current-temperature">12°C</div>
+                <div class="other-weather">
+                    <p id="feels-like4">Ощущается как: 11°C</p>
+                    <p id="wind-speed4">Скорость ветра: 2м/с</p>
+                    <p id="humidity4">Влажность: 30%</p>
+                </div>
+            </div>
+            <div class="day-weather">
+                <div class="weather-intime">
+                    <p>03 : 00</p>
+                    <img id="img32" src="" alt="">
+                    <p id="temp32"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>06 : 00</p>
+                    <img id="img33" src="">
+                    <p id="temp33"</p>
+                </div>
+                <div class="weather-intime">
+                    <p>09 : 00</p>
+                    <img id="img34" src="" alt="">
+                    <p id="temp34"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>12 : 00</p>
+                    <img id="img35" src="" alt="">
+                    <p id="temp35"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>15 : 00</p>
+                    <img id="img36" src="" alt="">
+                    <p id="temp36"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>18 : 00</p>
+                    <img id="img37" src="" alt="">
+                    <p id="temp37"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>21 : 00</p>
+                    <img id="img38" src="" alt="">
+                    <p id="temp38"></p>
+                </div>
+                <div class="weather-intime">
+                    <p>00 : 00</p>
+                    <img id="img39" src="" alt="">
+                    <p id="temp39"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <form>
+            <input type="text" id="city-name-input" class="bordered-block" placeholder="Введите город">
+            <button id="get-weather-btn" class="bordered-button">Узнать погоду</button>
+        </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+@font-face {
+	font-family: 'Lato'; 
+	src: local('Lato'),
+		url(/fonts/Lato-Regular.ttf); 
+}
+
+@font-face {
+	font-family: 'Lato bold'; 
+	src: local('Lato bold'),
+		url(/fonts/Lato-Bold.ttf); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(109, 107, 189);
+
+}
+
+.header {
+    max-width: 570px;
+    margin:70px auto 0;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    color: rgb(240, 164, 22);
+}
+
+.bordered-block {
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    padding: 10px 60px;
+    font-size: 22px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.534);
+
+}
+
+.bordered-button {
+    border: 2px solid rgb(240, 164, 22);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: 550;
+    background-color: rgb(240, 164, 22);
+    color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.534);
+
+}
+
+.container {
+    max-width: 570px;
+    width: 100%;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    margin: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container form {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#city-name-input {
+    text-align: center;
+}
+
+.weather {
+    width: 100%;
+    display: none;
+}
+
+.weather-description-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.weather-data {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.tab {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgb(240, 164, 22);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.534);
+}
+
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+
+.tab button:hover {
+    background-color: rgb(255, 206, 114);
+}
+
+
+.tab button.active {
+    background-color: rgb(240, 164, 22);
+  color: #fff;
+}
+
+.tablinks {
+    width: 20%;
+    font-size: 19px;
+    font-weight: 550;
+}
+
+.tabcontent {
+    margin-top: 10px;
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    padding: 6px 12px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.534);
+
+}
+
+.current-city {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 550;
+}
+
+.current-city p {
+    color: rgb(240, 164, 22);
+}
+
+.current-weather {
+    display: flex;
+}
+
+.current-temperature {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    padding-right: 10px;
+    font-size: 115px;
+    font-weight: 700;
+    color: rgb(216, 140, 0);
+}
+
+.other-weather {
+    width: 50%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.other-weather p{
+    font-size: 21px;
+    font-weight: 550;
+}
+
+.day-weather{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.weather-intime {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8px;
+}
+
+.weather-intime img {
+    width: 100%;
+    height: 100%;
+}
+
+.weather-intime p {
+    font-size: 12px;
+    font-weight: 550;
+}
+
+@media (max-width: 1200px) {
+    .bordered-block{
+        width: 100%;
+    }
+    .bordered-button{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .current-temperature{
+        font-size: 80px;
+    }
+    .other-weather p{
+        font-size: 16px;
+    }
+    .weather-intime {
+        width: 25%;
+    }
+};
+@media (max-width: 860px) {
+    .current-city{
+        font-size: 24px;
+    }
+    .other-weather{
+        width: 100%;
+    }
+    .current-temperature{
+        width: 100%;
+    }
+};
+@media (max-width: 500px) {
+    .weather-intime {
+        flex-wrap: wrap;
+    }
+};
