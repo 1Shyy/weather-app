@@ -36,7 +36,7 @@ function extractWeatherData(response) {
         }
     }
     for (let i = 0; i < 40 - startIndex; i++){
-        if (i > 4 && response.list[i].dt_txt.slice(11,13) == '12') {
+        if (i > 3 && response.list[i].dt_txt.slice(11,13) == '12') {
             temperature.push(response.list[i].main.temp);
             feelsLike.push(response.list[i].main.feels_like);
             humidity.push(response.list[i].main.humidity);
@@ -48,6 +48,7 @@ function extractWeatherData(response) {
         weatherIconUrl.push(`http://openweathermap.org/img/wn/${weatherIcon}.png`);
         temp.push(temper);
     }
+    console.log(date)
     for (let i = 0; i < 5; i++) {
         dateFull = Date.parse(date[i].replace(' ','T'))
         days.push(new Intl.DateTimeFormat('ru',options = {
@@ -70,8 +71,8 @@ function extractWeatherData(response) {
 
 function displayWeather(weatherData) {
     const { temperature, feelsLike, humidity, weatherIconUrl, windSpeed, startIndex, temp, days} = weatherData;
-    document.getElementById('current-city').innerHTML = "Погода в городе <p>&nbsp;" + cityNameInput.value;
     for (let i = 0; i < 5; i++) {
+        document.getElementById(`current-city${i}`).innerHTML = "Погода в городе <p>&nbsp;" + cityNameInput.value;
         document.getElementById(`current-temperature${i}`).textContent = Math.trunc(temperature[i]) + '°C';
         document.getElementById(`feels-like${i}`).textContent = "Ощущается как: " + Math.trunc(feelsLike[i]) + '°C';
         document.getElementById(`wind-speed${i}`).textContent = "Скорость ветра: " + windSpeed[i] + 'м/с';
